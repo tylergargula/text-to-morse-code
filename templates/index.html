@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Text to Morse Code Converter | Tyler Gargula</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Convert text to Morse code with a push of a button. Enter your
+		message and hit the convert button to see the corresponding Morse code. Perfect for those learning the Morse code
+		alphabet or for sending secret messages. Try it now for free!" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<form id="submit-form" method="post" action="{{ url_for('homepage') }}">
+								<h1><input type="text" name="user-string" id="user-string" placeholder="Hi, enter your text here"></h1>
+								</form>
+							</header>
+							<div class="content">
+								<p>Convert text to Morse code with one button.<br>Enter your message and hit the convert button to see the corresponding Morse code.</p>
+								<ul class="actions">
+									<li><button type = "submit" class="button next scrolly" form="submit-form">Convert Text</button>
+										</li>
+								</ul>
+							</div>
+							{% if output: %}
+							<h3 class="output-text">Your Input:  "{{ input }}"</h3>
+							<h3 class="output-text">Morse Code:<br class="break">  "{{ output }}"</h3>
+							{% endif %}
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Tyler Gargula</li><li><a href="https://tylergargula.dev">tylergargula.dev</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
